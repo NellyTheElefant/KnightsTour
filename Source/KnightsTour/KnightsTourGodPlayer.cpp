@@ -69,7 +69,7 @@ void AKnightsTourGodPlayer::SetupComponents()
 
 void AKnightsTourGodPlayer::CreateCollisionComponent()
 {
-	CollisionComponent = CreateDefaultSubobject<USphereComponent>(TEXT("CollisionComponent"));
+	CollisionComponent = CreateDefaultSubobject<USphereComponent>(TEXT("CollisionComponent")); //TODO: Add nullptr checks?
 	CollisionComponent->SetupAttachment(RootComponent);
 	CollisionComponent->InitSphereRadius(40.0f); //TODO: Remove Hard Coding & 
 	CollisionComponent->BodyInstance.SetCollisionEnabled(ECollisionEnabled::QueryOnly);

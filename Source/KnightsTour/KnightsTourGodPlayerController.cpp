@@ -78,7 +78,7 @@ void AKnightsTourGodPlayerController::MoveRight(float Value)
 {
 	if (CanMove(Value))
 	{
-		PossessedPawn->MoveRight(Value * CalculateMovementSpeed());
+		PossessedPawn->MoveRight(Value * CalculateMovementSpeed()); //TODO: Consider caching movement speed
 	}
 }
 
@@ -86,6 +86,6 @@ void AKnightsTourGodPlayerController::RotateClockwise(float Value)
 {
 	if (CanMove(Value))
 	{
-		PossessedPawn->AddYaw(Value * CalculateMovementSpeed()); //TODO: Consider caching movement speed
+		PossessedPawn->AddYaw(Value * CalculateRotationSpeed()); 
 	}
 }
